@@ -68,11 +68,9 @@ public:
         
         l3.show();
         if (l3.hit(blk)) {
-            cout << " >> HIT (40 cyc) promote " << blk << " -> L2 -> L1\n";
+            cout << " >> HIT (40 cyc) promote " << blk << " -> L1\n"; // Fixed text
             cycles += 40;
-            l2.insert(blk);
-            l1.insert(blk);
-            l2.show(); cout << "\n";
+            l1.insert(blk); 
             l1.show(); cout << "\n";
             return;
         }
